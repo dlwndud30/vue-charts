@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="lineChart"></canvas>
+    <canvas ref="lineChart" id="lineChart"></canvas>
   </div>
 </template>
 
@@ -8,7 +8,8 @@
 import Chart from 'chart.js/auto';
 export default {
     mounted(){
-        const ctx = document.getElementById('lineChart');
+        // const ctx = document.getElementById('lineChart');
+        const ctx = this.$refs.lineChart;
 
         new Chart(ctx, {
             type: 'line',

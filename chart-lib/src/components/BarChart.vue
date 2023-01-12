@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="barChart" width="400" height="400"></canvas>
+    <canvas ref="barChart" id="barChart" width="400" height="400"></canvas>
   </div>
 </template>
 
@@ -9,6 +9,8 @@ import Chart from 'chart.js/auto'
 
 export default {
 mounted(){
+    const ctx = this.$refs.barChart;
+
     (async function() {
       const data = [
         { year: 2010, count: 10 },
@@ -21,7 +23,7 @@ mounted(){
       ];
 
       new Chart(
-        document.getElementById('barChart'),
+        ctx,
         {
           type: 'bar',
           data: {
