@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import Chart from 'chart.js/auto';
 export default {
     mounted(){
         // const ctx = document.getElementById('lineChart');
         const ctx = this.$refs.lineChart;
 
-        new Chart(ctx, {
+        new this.$_Chart(ctx, {
             type: 'line',
             data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
