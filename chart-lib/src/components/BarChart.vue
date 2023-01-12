@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="barChart" width="400" height="400"></canvas>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ mounted(){
       ];
 
       new Chart(
-        document.getElementById('myChart'),
+        document.getElementById('barChart'),
         {
           type: 'bar',
           data: {
