@@ -2,6 +2,10 @@
   <div id="app">
     <ul>
       <item-element v-for="(item, idx) in items" :key="idx">{{ item }}</item-element>
+      <item-element>item6 <button>click me</button></item-element>
+      <item-element>
+        <div style="color:bisque; font-size:20px">item7</div>
+      </item-element>
     </ul>
   </div>
 </template>
@@ -12,6 +16,7 @@ import ItemElement from '@/ItemElement.vue';
 export default {
   name: 'App',
   components: {
+    ItemElement
     ItemElement,
   },
   data(){
