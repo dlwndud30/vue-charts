@@ -17,7 +17,6 @@ export default {
   name: 'App',
   components: {
     ItemElement
-    ItemElement,
   },
   data(){
     return{
